@@ -89,7 +89,7 @@ echo "==================================================="
 echo -e '\n\e[42mПроверка статуса ноды\e[0m\n' && sleep 1
 if [[ `service subspaced status | grep active` =~ "running" ]]; then
   echo -e "Subspace нода \e[32mустановлена и работает\e[39m!"
-  echo -e "Проверить логи ноды можно командой - \e[7msjournalctl -u subspaced -f -o cat\e[0m"
+  echo -e "Проверить логи ноды можно командой - \e[7mjournalctl -u subspaced -f -o cat\e[0m"
 else
   echo -e "Subspace нода \e[31mбыла установлена некорректно\e[39m, пожалуйста, переустанови ее."
 fi
