@@ -6,7 +6,7 @@ fi
 echo 'Имя вашей ноды: ' $NODE_NAME
 sleep 1
 echo 'export SUBSPACE_NODENAME='$NODE_NAME >> $HOME/.bash_profile
-echo -e "\n\e[42mГотово"
+echo -e '\n\e[42mПроверка статуса ноды\e[0m\n'
 echo "-----------------------------------------------------------------------------"
 if [ ! $YOUR_WALLET ]; then
 	read -p "Адрес кошелька Subspace Gemini 2: " YOUR_WALLET
