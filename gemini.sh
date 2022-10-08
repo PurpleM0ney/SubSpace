@@ -3,7 +3,7 @@
 if [ ! $NODE_NAME ]; then
 	read -p "Имя вашей ноды : " NODE_NAME
 fi
-echo 'Имя вашей ноды: ' $NODE_NAME
+echo 'Введите имя вашей ноды: ' $NODE_NAME
 sleep 1
 echo 'export SUBSPACE_NODENAME='$NODE_NAME >> $HOME/.bash_profile
 echo -e '\n\e[42mГотово\e[0m\n'
