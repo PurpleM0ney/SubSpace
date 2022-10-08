@@ -84,12 +84,13 @@ sudo systemctl enable subspaced subspaced-farmer
 sudo systemctl restart subspaced
 sleep 10
 sudo systemctl restart subspaced-farmer
+clear
 
-echo "==================================================="
 echo -e '\n\e[42mПроверка статуса ноды\e[0m\n' && sleep 1
 if [[ `service subspaced status | grep active` =~ "running" ]]; then
   echo -e "Subspace нода \e[32mустановлена и работает\e[39m!"
   echo -e "Проверить логи ноды можно командой - \e[7mjournalctl -u subspaced -f -o cat\e[0m"
+  echo -e "Команда для рестарта ноды - \e[7msudo systemctl restart subspaced\e[0m"
 else
   echo -e "Subspace нода \e[31mбыла установлена некорректно\e[39m, пожалуйста, переустанови ее."
 fi
@@ -99,6 +100,7 @@ echo -e '\n\e[42mПроверка статуса фармера\e[0m\n' && sleep
 if [[ `service subspaced-farmer status | grep active` =~ "running" ]]; then
   echo -e "Subspace фармер \e[32mустановлен и работает\e[39m!"
   echo -e "Проверить логи фармера можно командой - \e[7mjournalctl -u subspaced-farmer -f -o cat\e[0m"
+  echo -e "Команда для рестарта фармера - \e[7msudo systemctl restart subspaced-farmer\e[0m"
 else
   echo -e "Subspace фармер \e[31mбыл установлен некорректно\e[39m, пожалуйста, переустанови его."
 fi
