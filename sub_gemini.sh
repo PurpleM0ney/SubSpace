@@ -88,9 +88,9 @@ sudo systemctl restart subspaced-farmer
 echo "==================================================="
 echo -e '\n\e[42mПроверка статуса ноды\e[0m\n' && sleep 1
 if [[ `service subspaced status | grep active` =~ "running" ]]; then
-  echo -e "Subspace нода \e[32mустановлен и работает\e[39m!"
-  echo -e "Ты можешь проверить работоспособность ноды командой \e[7mservice subspaced status\e[0m"
-  echo -e "ажми \e[7mQ\e[0m для выхода из меню"
+  echo -e "Subspace нода \e[32mустановлена и работает\e[39m!"
+  echo -e "Команда для проверки работоспособности ноды - \e[7mservice subspaced status\e[0m"
+  echo -e "Кнопка \e[7mQ\e[0m - выход из меню ноды"
 else
   echo -e "Subspace нода \e[31mбыла установлена некорректно\e[39m, пожалуйста, переустанови ее."
 fi
@@ -99,8 +99,8 @@ echo "==================================================="
 echo -e '\n\e[42mПроверка статуса фармера\e[0m\n' && sleep 1
 if [[ `service subspaced-farmer status | grep active` =~ "running" ]]; then
   echo -e "Subspace фармер \e[32mустановлен и работает\e[39m!"
-  echo -e "Ты можешь проверить работоспособность фармера командой \e[7mservice subspaced-farmer status\e[0m"
-  echo -e "Нажми \e[7mQ\e[0m для выхода из меню"
+  echo -e "Команда для проверки работоспособности фармера - \e[7mservice subspaced-farmer status\e[0m"
+  echo -e "Кнопка \e[7mQ\e[0m - выход из меню фармера"
 else
   echo -e "Subspace фармер \e[31mбыл установлен некорректно\e[39m, пожалуйста, переустанови его."
 fi
